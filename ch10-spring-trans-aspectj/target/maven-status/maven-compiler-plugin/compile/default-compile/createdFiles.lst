@@ -1,0 +1,7 @@
+com\hfq\entity\Goods.class
+com\hfq\service\BuyGoodsService.class
+com\hfq\dao\GoodsDao.class
+com\hfq\service\impl\BuyGoodsServiceImpl.class
+com\hfq\excep\NotEnoughException.class
+com\hfq\entity\Sale.class
+com\hfq\dao\SaleDao.class
