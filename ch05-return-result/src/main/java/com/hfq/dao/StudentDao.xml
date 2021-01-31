@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfq.dao.StudentDao">
+    <select id="selectStudentById" parameterType="java.lang.Integer" resultType="com.hfq.entity.Student">
+        select  * from student where id = #{id}
+    </select>
+
+    <!--多个参数，使用@Param命名-->
+    <select id="selectMulitParam" resultType="com.hfq.entity.Student">
+        select id,name,email,age from student where name=#{myname} or age=#{myage}
+    </select>
+
+    <!--sql执行后返回一行一列-->
+    <select id="countStudent" resultType="int">
+        select count(*) from student
+    </select>
+
+    <!--第一种like， 在java代码中指定like的内容-->
+    <select id="selectLikeOne" resultType="com.hfq.entity.Student">
+        select * from student where name like #{name}
+    </select>
+    <!--第二种like,在mapper中拼接like的内容-->
+    <select id="selectLikeTwo" resultType="com.hfq.entity.Student">
+        select * from student where name like "%" #{name} "%"
+    </select>
+</mapper>

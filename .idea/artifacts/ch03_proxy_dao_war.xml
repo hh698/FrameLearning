@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch03-proxy-dao:war">
+    <output-path>$PROJECT_DIR$/ch03-proxy-dao/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch03-proxy-dao</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch03-proxy-dao-1.0.war">
+      <element id="artifact" artifact-name="ch03-proxy-dao:war exploded" />
+    </root>
+  </artifact>
+</component>

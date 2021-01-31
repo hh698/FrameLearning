@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch06-dynamic-sql:war">
+    <output-path>$PROJECT_DIR$/ch06-dynamic-sql/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch06-dynamic-sql</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch06-dynamic-sql-1.0.war">
+      <element id="artifact" artifact-name="ch06-dynamic-sql:war exploded" />
+    </root>
+  </artifact>
+</component>

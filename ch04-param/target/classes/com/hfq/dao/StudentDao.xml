@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfq.dao.StudentDao">
+    <!--parameterType表示dao接口中方法参数的数据类型
+    parameterType的值是java数据类型的全限定名称或者是mybatis定义的别名
+    parameterType="java.lang.Integer"
+    parameterType="int"
+
+    parameterType不是强制的，mybatis通过反射机制能够发现接口参数的参数类型
+    所以可以没有，一般也不写
+
+    使用#{}之后，mybatis执行sql是使用jdbc中的PreparedStatement对象
+    -->
+    <select id="selectStudentById" parameterType="java.lang.Integer" resultType="com.hfq.entity.Student">
+        select  * from student where id = #{id}
+    </select>
+
+    <!--多个参数，使用@Param命名-->
+    <select id="selectMulitParam" resultType="com.hfq.entity.Student">
+        select id,name,email,age from student where name=#{myname} or age=#{myage}
+    </select>
+
+    <!--多个参数，使用java对象属性值作为参数实际值
+    使用对象语法: #{属性名，javaType=类型名称,jdbcType=数据类型}  很少用
+    javaType:在java中的属性数据类型
+    jdbcType:在数据库中的属性数据类型
+
+    简化方式：#{属性名}   javaType,jdbcType的值mybatis反射能够获取
+    -->
+    <select id="selectMulitObject" resultType="com.hfq.entity.Student">
+        select id,name,email,age from student where name=#{paramName} or age=#{ParamAge}
+    </select>
+
+    <select id="selectMulitStudent" resultType="com.hfq.entity.Student">
+        select id,name,email,age from student where name=#{name} or age=#{age}
+    </select>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ch01-hello-mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/ch02-mybatis-dao" />
+    <file type="web" url="file://$PROJECT_DIR$/ch03-proxy-dao" />
+    <file type="web" url="file://$PROJECT_DIR$/ch04-param" />
+    <file type="web" url="file://$PROJECT_DIR$/ch05-return-result" />
+    <file type="web" url="file://$PROJECT_DIR$/ch06-dynamic-sql" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ch01-hello-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/ch02-mybatis-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03-proxy-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-param/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05-return-result/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06-dynamic-sql/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="false">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
