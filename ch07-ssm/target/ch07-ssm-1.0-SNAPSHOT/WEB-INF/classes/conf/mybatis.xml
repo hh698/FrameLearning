@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--settings：控制mybatis全局行为-->
+<!--    <settings>-->
+<!--        &lt;!&ndash;设置mybatis输出日志&ndash;&gt;-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+
+    <!--设置别名-->
+    <typeAliases>
+        <!--name  实体类所在的包名-->
+        <package name="com.hfq.entity"/>
+    </typeAliases>
+
+    <!-- sql mapper(sql映射文件)的位置-->
+    <mappers>
+        <!--一个mapper标签指定一个文件的位置。
+           从类路径开始的路径信息。  target/clasess(类路径)
+        -->
+        <!--        <mapper resource="com/hfq/dao/StudentDao.xml"/>-->
+
+
+        <!--name 包名 这个包中所有mapper，xml一次都能加载  -->
+        <!--使用package的要求
+        1.mapper文件名称和dao接口名必须完全一样，包括大小写
+        2.mapper文件和dao接口在同一目录
+        -->
+        <package name="com.hfq.dao"/>
+    </mappers>
+</configuration>
